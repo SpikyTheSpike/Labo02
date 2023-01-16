@@ -1,0 +1,9 @@
+<a routerLink="/gestion/accueil"><button>retour</button></a>
+
+<div *ngIf="activity">
+<h3>{{activity.name}}</h3>
+<p>Description : {{activity.description}}</p>
+<p>Max de place : {{activity.maxGuest}}</p>
+<p>Date de début : {{activity.startDate | date}}</p>
+<p>Date de fin : {{activity.endDate  | date}}</p>
+</div>

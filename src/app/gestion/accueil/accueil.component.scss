@@ -1,0 +1,14 @@
+.allEvent{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+
+.event{
+  border: 1px solid black;
+ width: 75%;
+ text-align: center;
+ padding: 1%;
+}

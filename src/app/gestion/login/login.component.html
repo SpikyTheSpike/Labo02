@@ -1,0 +1,15 @@
+<div class="login">
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div>
+          <input type="text" placeholder="Login ou Email"  formControlName="identifier">
+      </div>
+      <div>
+          <input type="password" placeholder="Mot de passe"  formControlName="password">
+      </div>
+      <div>
+          <input type="submit" value="Se connecter">
+      </div>
+
+      <a routerLink="/gestion/register">Pas de compte ? Cliquez ici pour en créer un </a>
+  </form>
+</div>

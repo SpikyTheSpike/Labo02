@@ -1,0 +1,23 @@
+<nav >
+  <ul>
+      <li >
+         <a routerLink="/gestion/accueil">Accueil</a>
+      </li>
+      <li *ngIf="connectedUser">
+        <a routerLink="/gestion/myevents">Mes Events</a>
+     </li>
+     <li  *ngIf="connectedUser">
+      <a routerLink="/gestion/myreservations">Mes Réservations</a>
+   </li>
+  </ul>
+
+
+
+ <div *ngIf="!connectedUser">
+      <a routerLink="/gestion/login"><button>Se connecter</button></a>
+  </div>
+  <div *ngIf="connectedUser">
+      <div>Bonjour {{connectedUser.firstname}}</div>
+      <button (click)="disconnect()">Se deconnecter</button>
+  </div>
+</nav>

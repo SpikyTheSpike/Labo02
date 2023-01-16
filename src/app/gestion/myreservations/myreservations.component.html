@@ -1,0 +1,11 @@
+<h2>Les events</h2>
+
+<div *ngIf="liste" class="allEvent">
+  <div class="event" *ngFor="let item of liste">
+    <h3>{{item.name}}</h3>
+    <p>{{item.description}}</p>
+    <a routerLink="/gestion/detail/{{item.id}}"><button >🔎</button>  </a><!-- voir détail -->
+
+
+  </div>
+</div>
