@@ -9,15 +9,20 @@
      <li  *ngIf="connectedUser">
       <a routerLink="/gestion/myreservations">Mes Réservations</a>
    </li>
+   <li>
+     <div *ngIf="!connectedUser">
+      <a routerLink="/gestion/login"><button  class="btn btn-warning">Se connecter</button></a>
+  </div>
+  <div *ngIf="connectedUser">
+
+      <button class="btn btn-warning" (click)="disconnect()">Se deconnecter</button>
+      <div>Bonjour {{connectedUser.firstname}}</div>
+  </div>
+   </li>
+
   </ul>
 
 
 
- <div *ngIf="!connectedUser">
-      <a routerLink="/gestion/login"><button>Se connecter</button></a>
-  </div>
-  <div *ngIf="connectedUser">
-      <div>Bonjour {{connectedUser.firstname}}</div>
-      <button (click)="disconnect()">Se deconnecter</button>
-  </div>
+
 </nav>

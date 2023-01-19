@@ -1,14 +1,14 @@
 <h2>Mes Events</h2>
-<a routerLink="/gestion/create"><button>Créer un event</button></a>
+<a routerLink="/gestion/create"><button class="btn btn-warning">Créer un event</button></a>
 <div *ngIf="liste" class="allEvent">
   <div class="event"  *ngFor="let item of liste" >
     <div *ngIf="currentMember===item.creatorId.toString()">
     <h3>{{item.name}}</h3>
     <p>{{item.description}}</p>
-    <a routerLink="/gestion/detail/{{item.id}}"> <button>🔎</button> </a><!-- voir détail -->
-    <a routerLink="/gestion/update/{{item.id}}"><button>📝</button></a> <!-- modifier -->
-    <button (click)="cancele(item.id)">🐸</button> <!-- annuler -->
-    <button (click)="delete(item.id)">❌</button> <!-- supprimer -->
+    <a routerLink="/gestion/detail/{{item.id}}"> <button class="btn btn-warning">🔎</button> </a><!-- voir détail -->
+    <a routerLink="/gestion/update/{{item.id}}"><button class="btn btn-warning">📝</button></a> <!-- modifier -->
+    <button class="btn btn-warning" (click)="cancele(item.id)">🐸</button> <!-- annuler -->
+    <button class="btn btn-warning" (click)="delete(item.id)">❌</button> <!-- supprimer -->
     </div>
   </div>
 </div>

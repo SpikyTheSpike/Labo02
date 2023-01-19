@@ -4,11 +4,10 @@
   <div class="event" *ngFor="let item of liste">
     <h3>{{item.name}}</h3>
     <p>{{item.description}}</p>
-
-    <a routerLink="/gestion/create/{{item.id}}"> <button *ngIf="currentMember!==item.creatorId.toString()&& (!listeID.includes(item.id))  && currentMember!==null ">S'inscrire</button></a>
-    <a routerLink="/gestion/detail/{{item.id}}"><button >🔎</button>  </a><!-- voir détail -->
-    <a routerLink="/gestion/update/{{item.id}}"><button *ngIf="currentMember===item.creatorId.toString()">📝</button></a>
-    <button (click)="cancele(item.id)" *ngIf="currentMember===item.creatorId.toString()">🐸</button> <!-- annuler -->
-    <button (click)="delete(item.id)" *ngIf="currentMember===item.creatorId.toString()">❌</button> <!-- supprimer -->
+    <a routerLink="/gestion/create/{{item.id}}"> <button class="btn btn-warning" *ngIf="currentMember!==item.creatorId.toString()&& (!listeID.includes(item.id))  && currentMember!==null ">S'inscrire</button></a>
+    <a routerLink="/gestion/detail/{{item.id}}"><button class="btn btn-warning"  >🔎</button>  </a><!-- voir détail -->
+    <a routerLink="/gestion/update/{{item.id}}"><button class="btn btn-warning" *ngIf="currentMember===item.creatorId.toString()">📝</button></a>
+    <button  class="btn btn-warning" (click)="cancele(item.id)" *ngIf="currentMember===item.creatorId.toString()">🐸</button> <!-- annuler -->
+    <button class="btn btn-warning" (click)="delete(item.id)" *ngIf="currentMember===item.creatorId.toString()">❌</button> <!-- supprimer -->
   </div>
 </div>

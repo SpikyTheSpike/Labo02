@@ -1,9 +1,14 @@
-<a routerLink="/gestion/accueil"><button>retour</button></a>
+<a routerLink="/gestion/accueil"><button class="btn btn-warning">retour</button></a>
 
-<div *ngIf="activity">
-<h3>{{activity.name}}</h3>
-<p>Description : {{activity.description}}</p>
-<p>Max de place : {{activity.maxGuest}}</p>
-<p>Date de début : {{activity.startDate | date}}</p>
-<p>Date de fin : {{activity.endDate  | date}}</p>
+
+
+
+<div class="card" *ngIf="activity" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{activity.name}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{activity.description}}</h6>
+    <p class="card-text">max : {{activity.maxGuest}}</p>
+    <p class="card-text">Date de début : {{activity.startDate | date}}</p>
+    <p class="card-text">Date de fin : {{activity.endDate  | date}}</p>
+  </div>
 </div>

@@ -1,24 +1,24 @@
-<a routerLink="/gestion/myevents"><button>retour</button></a>
+<a routerLink="/gestion/myevents"><button class="btn btn-warning">retour</button></a>
 <div class="register">
   <form [formGroup]="registerForm"  (ngSubmit)="register()">
       <div>
-          <input type="text" placeholder="Titre" formControlName="name">
+          <input class="input-group-text" type="text" placeholder="Titre" formControlName="name">
       </div>
       <div>
-          <textarea  placeholder="description" formControlName="description"></textarea>
+          <textarea class="input-group-text" placeholder="description" formControlName="description"></textarea>
       </div>
       <div>
-          <input type="date" placeholder="Date Début" formControlName="startDate">
+          <input  class="input-group-text" type="date" placeholder="Date Début" formControlName="startDate">
       </div>
       <div>
-          <input type="date" placeholder="Date Fin" formControlName="endDate">
+          <input class="input-group-text" type="date" placeholder="Date Fin" formControlName="endDate">
       </div>
       <div>
-          <input type="number" placeholder="Nombre de place maximum" formControlName="maxGuest">
+          <input class="input-group-text" type="number" placeholder="Nombre de place maximum" formControlName="maxGuest">
 
       </div>
       <div>
-          <input type="submit" value="Créer un event">
+          <input class="btn btn-warning" type="submit" value="Créer un event">
       </div>
       <div *ngIf="isCreate ==='true'">
         <p>Compte à bien été modifier</p>
